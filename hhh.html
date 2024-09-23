@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Bangladesh</title>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <!-- css styles link -->
+    <link rel="stylesheet" href="style.css">
+    <!-- tailwind and daisyUI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <!-- 
+    <button id="donate-btn-noyakhali" class="border-2 rounded-lg w-full text-xl font-semibold py-4 bg-lime-400">Donate
+        Now</button>
+
+    <div id="Noakhali-modal-on" class="flex justify-center items-center bg-red-500 bg-opacity-30 fixed inset-0"> -->
+    <!-- modal -->
+    <!-- <div class="max-w-sm w-full bg-white text-center rounded-xl p-6 border">
+            <h3 class="text-3xl font-bold text-lime-600">Congratulations</h3>
+            <img src="./assets/coin.png" class="mx-auto w-[50px] mt-4" alt="">
+            <p class="text-gray-600 text-xl">You Have Donate for Flood</p>
+            <p class="text-3xl text-bold mb-5">successfully</p>
+
+            <div>
+                <p class=" text-sm">
+                    "The upper hand is better than the lower hand"
+                </p>
+                <em class="font-bold text-sm">Prophet Muhammad (ﷺ)</em>
+            </div>
+            <div class="mt-4">
+                <button id="modal-close" class="btn rounded-full">Close information</button>
+            </div>
+        </div>
+    </div> -->
+
+
+
+    <!-- Donate Now Button -->
+    <!-- <button id="donate-btn-noyakhali" class="border-2 rounded-lg w-full text-xl font-semibold py-4 bg-lime-400">Donate
+        Now</button> -->
+
+    <!-- Modal -->
+    <!-- <div id="Noakhali-modal" class="fixed inset-0 bg-gray-900 bg-opacity-50 flex justify-center items-center "> -->
+    <!-- <div class="bg-white p-8 rounded  shadow-lg max-w-md w-full text-center">
+            <h3 class="text-3xl font-bold text-lime-600">Congratulations</h3>
+            <img src="./assets/coin.png" class="mx-auto w-[50px] mt-4" alt="">
+            <p class="text-gray-600 text-xl">You Have Donated for Flood</p>
+            <p class="text-3xl font-bold mb-5">successfully</p>
+            <div>
+                <p class="text-sm">"The upper hand is better than the lower hand"</p>
+                <em class="font-bold text-sm">Prophet Muhammad (ﷺ)</em>
+            </div>
+            <div class="flex justify-center mt-4">
+                <button id="close-modal" class="btn rounded-full">Close information</button>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- Open the modal using ID.showModal() method -->
+    <!-- Open the modal using ID.showModal() method -->
+    <h3 class="text-3xl font-bold text-lime-600">Congratulations</h3>
+    <img src="./assets/coin.png" class="mx-auto w-[50px] mt-4" alt="">
+    <p class="text-gray-600 text-lg">You Have Donate for Flood Noakhali</p>
+    <p class="text-3xl text-bold mb-5">successfully</p>
+    <div>
+        <p class=" text-sm">
+            "The upper hand is better than the lower hand"
+        </p>
+        <em class="font-bold text-sm">Prophet Muhammad (ﷺ)</em>
+    </div>
+    <div class="mt-4">
+        <button id="noakhali-modal-off" class="btn rounded-full">Close information</button>
+    </div>
+
+
+
+    <!-- ================================== -->
+    <button class="btn" onclick="my_modal_2.showModal()">open modal</button>
+    
+    <dialog id="my_modal_2" class="modal">
+        <div class="modal-box">
+            <h3 class="text-lg font-bold">Hello!</h3>
+            <p class="py-4">Press ESC key or click outside to close</p>
+        </div>
+        <form method="dialog" class="modal-backdrop">
+            <button>close</button>
+        </form>
+    </dialog>
+
+    <script>
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs</title>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <!-- css styles link -->
+    <link rel="stylesheet" href="style.css">
+    <!-- tailwind and daisyUI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <main class="w-11/12 mx-auto">
+        <!-- header section to append of this child -->
+        <header id="navbar-clone">
+            
+        </header>
+        <!-- FAQs header -->
+        <div class="flex items-center gap-4 my-5 md:my-8">
+            <span class="text-4xl font-extrabold">Important FAQs</span> <img class="w-14"
+                src="./assets/help-question-svgrepo-com (1).svg" alt="">
+        </div>
+        <!-- Question and shortly answer container -->
+        <div>
+            <div class="join join-vertical w-full">
+                <div class="collapse collapse-arrow join-item border-base-300 border">
+                    <input type="radio" name="my-accordion-4" checked="checked" />
+                    <div class="collapse-title text-xl font-medium">What is sthe Document Object model (DOM) </div>
+                    <div class="collapse-content">
+                        <p>DOM is a programming interface for web documents</p>
+                    </div>
+                </div>
+                <div class="collapse collapse-arrow join-item border-base-300 border">
+                    <input type="radio" name="my-accordion-4" />
+                    <div class="collapse-title text-xl font-medium">How do you Select an element from the DOM?</div>
+                    <div class="collapse-content">
+                        <p>Select element through getElementById,getElementsByClassName, getElementsByTagName,
+                            QuerySelector</p>
+                    </div>
+                </div>
+                <div class="collapse collapse-arrow join-item border-base-300 border">
+                    <input type="radio" name="my-accordion-4" />
+                    <div class="collapse-title text-xl font-medium">What is event delegation in the context of DOM, and
+                        why is it useful?</div>
+                    <div class="collapse-content">
+                        <p>
+                            Event delegation is a technique where a parent element manages events for child elements
+                            using a single listener. It improves efficiency by reducing the number of listeners and
+                            handles dynamically added elements automatically. This is achieved through event bubbling,
+                            allowing events to propagate from child to parent elements.</p>
+                    </div>
+                </div>
+                <div class="collapse collapse-arrow join-item border-base-300 border">
+                    <input type="radio" name="my-accordion-4" />
+                    <div class="collapse-title text-xl font-medium">How do you manipulate an element's attribute and
+                        styles using the DOM?</div>
+                    <div class="collapse-content">
+                        <div>
+                            <p><span class="font-extrabold">A:</span> To manipulate an element's attributes, I use methods like getAttribute(), setAttribute(), and removeAttribute().</p>
+                            <p><span class="font-extrabold">b:</span>Use style for inline styles (e.g., element.style.color = 'red';) or classList to add, remove, or toggle CSS classes (element.classList.add('active');).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
