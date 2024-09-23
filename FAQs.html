@@ -20,12 +20,31 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body>
+<body class="overflow-y-scroll">
+    <header class="mb-10 sticky top-0 z-10 bg-white/30 backdrop-blur-lg">
+        <div class="bg-orange-200/15 ">
+            <nav class="w-11/12 md:w-10/12 mx-auto flex justify-between items-center pt-3 sm:pt-5 pb-8 sm:pb-14">
+                <!-- left side -->
+                <div>
+                    <button id="home-btn"
+                        class="bg-lime-400 px-6 sm:px-8 py-3 rounded-lg hover:bg-lime-500 text-base sm:text-xl font-semibold">Home</button>
+                </div>
+                <!-- center side -->
+                <div class="flex items-center justify-center gap-4">
+                    <img class="w-10" src="./assets/logo.png" alt="">
+                    <h3 class="font-semibold hidden sm:block text-xl">Bangladesh</h3>
+                </div>
+                <!-- right side-->
+                <div
+                    class="flex justify-center items-center gap-2 md:gap-3 text-gray-600 font-medium text-base sm:text-xl ">
+                    <img src="./assets/coin.png" alt="">
+                    <span>5000</span>
+                    <span>BDT</span>
+                </div>
+            </nav>
+        </div>
+    </header>
     <main class="w-11/12 mx-auto">
-        <!-- header section to append of this child -->
-        <header id="navbar-clone">
-            
-        </header>
         <!-- FAQs header -->
         <div class="flex items-center gap-4 my-5 md:my-8">
             <span class="text-4xl font-extrabold">Important FAQs</span> <img class="w-14"
@@ -67,14 +86,22 @@
                         styles using the DOM?</div>
                     <div class="collapse-content">
                         <div>
-                            <p><span class="font-extrabold">A:</span> To manipulate an element's attributes, I use methods like getAttribute(), setAttribute(), and removeAttribute().</p>
-                            <p><span class="font-extrabold">b:</span>Use style for inline styles (e.g., element.style.color = 'red';) or classList to add, remove, or toggle CSS classes (element.classList.add('active');).</p>
+                            <p><span class="font-extrabold">A:</span> To manipulate an element's attributes, I use
+                                methods like getAttribute(), setAttribute(), and removeAttribute().</p>
+                            <p><span class="font-extrabold">b:</span>Use style for inline styles (e.g.,
+                                element.style.color = 'red';) or classList to add, remove, or toggle CSS classes
+                                (element.classList.add('active');).</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </main>
+    <script>
+        document.getElementById('home-btn').addEventListener('click', function(){
+            window.location.href ='./index.html'
+        })
+    </script>
 </body>
 
 </html>
