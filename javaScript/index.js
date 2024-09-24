@@ -36,9 +36,26 @@ donateNoakhali.addEventListener('click', function () {
         // modal
         document.getElementById('Noakhali-modal').classList.remove("hidden");
 
-
-
+        const historyContainer = document.getElementById('history-container')
+        const historyCard = document.createElement('div');
+        historyCard.innerHTML = `
+            <div class="bg-white border p-4 md:p-8 rounded-xl">
+                    <h3 class="text-xl font-bold text text-gray-900 mb-4">
+                    ${InputNoakhali} Taka is Donated for Famine-2024 at Feni,
+                    Bangladesh
+                    </h3>
+                    <p>
+                    Date : ${new Date()}
+                    </p>
+        </div>
+        `;
+        historyContainer.prepend(historyCard);
         
+        
+
+
+
+
     }
 })
 
@@ -59,10 +76,10 @@ donateFeni.addEventListener('click', function () {
     const inputFeni = getInputValue("input-feni")
 
     // console.log({userFund,feniBalance,inputFeni})
-    if (isNaN(inputFeni) || inputFeni <= 0 || inputFeni > userFund || userFund <= 0 ) {
+    if (isNaN(inputFeni) || inputFeni <= 0 || inputFeni > userFund || userFund <= 0) {
         return alert('DGM Feni');
     }
-    else{
+    else {
         // update balance
         const newUserFund = userFund - inputFeni;
         const newBalanceFeni = balanceFeni + inputFeni;
@@ -77,7 +94,7 @@ donateFeni.addEventListener('click', function () {
 });
 
 // close modal feni
-document.getElementById('feni-modal-off').addEventListener('click', function(){
+document.getElementById('feni-modal-off').addEventListener('click', function () {
     console.log('"click" feni close')
     document.getElementById('feni-modal').classList.add('hidden');
 })
@@ -85,17 +102,17 @@ document.getElementById('feni-modal-off').addEventListener('click', function(){
 //--------------------------------------- Quota Movement Donate Section---------------------------------------//
 
 const donateQuota = document.getElementById('donate-btn-quota');
-donateQuota.addEventListener('click', function(){
+donateQuota.addEventListener('click', function () {
     // console.log('click quota')
     const userFund = getTextValue('user-fund');
     const quotaBalance = getTextValue('quota-balance');
     const inputQuota = getInputValue('input-quota')
 
     // validity testing
-    if (isNaN(inputQuota) || inputQuota <= 0 || inputQuota > userFund || userFund <= 0 ) {
+    if (isNaN(inputQuota) || inputQuota <= 0 || inputQuota > userFund || userFund <= 0) {
         return alert('DGM Quota');
     }
-    else{
+    else {
         // update balance
         const newUserFund = userFund - inputQuota;
         const newBalanceQuota = quotaBalance + inputQuota;
@@ -109,7 +126,7 @@ donateQuota.addEventListener('click', function(){
 })
 
 // close modal feni
-document.getElementById('quota-modal-off').addEventListener('click', function(){
+document.getElementById('quota-modal-off').addEventListener('click', function () {
     // console.log('click close "quota"')
     document.getElementById('quota-modal').classList.add('hidden');
 })
@@ -122,22 +139,22 @@ const historyBtn = document.getElementById('history-btn');
 const donateContainer = document.getElementById('donate-container')
 
 
-historyBtn.addEventListener('click', function(){
+historyBtn.addEventListener('click', function () {
     historyBtn.classList.add('bg-lime-400', 'text-gray-950');
     historyBtn.classList.remove('text-gray-600', 'border');
 
     donationBtn.classList.remove('bg-lime-400', 'text-gray-950');
-    donationBtn.classList.add( 'border-2');
+    donationBtn.classList.add('border-2');
 
     donateContainer.classList.add('hidden')
 
 })
 
-donationBtn.addEventListener('click', function(){
-    
+donationBtn.addEventListener('click', function () {
+
     donationBtn.classList.add('bg-lime-400', 'text-gray-950')
-    donationBtn.classList.remove( 'border-2');
-    
+    donationBtn.classList.remove('border-2');
+
     historyBtn.classList.remove('bg-lime-400', 'text-gray-950');
     historyBtn.classList.add('text-gray-600', 'border');
 
