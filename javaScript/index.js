@@ -18,7 +18,7 @@ donateNoakhali.addEventListener('click', function () {
 
     // validity testing
     if (isNaN(InputNoakhali) || InputNoakhali <= 0 || userFund <= 0 || userFund < InputNoakhali) {
-        return alert('DGM')
+        return alert("Kindly Insure:\n -Valid Amount\n -Sufficient Fund\n -Amount must be Positive Value")
     }
     else {
         // update balance
@@ -33,7 +33,7 @@ donateNoakhali.addEventListener('click', function () {
 
         // history
         const historyCard = document.createElement('div');
-        historyCard.classList.add('bg-white', 'border' ,'p-4', 'md:p-8' ,'rounded-xl')
+        historyCard.classList.add('bg-white', 'border', 'p-4', 'md:p-8', 'rounded-xl')
 
         historyCard.innerHTML = `
                     <h3 class="text-xl font-bold text text-gray-900 mb-4">
@@ -68,7 +68,7 @@ donateFeni.addEventListener('click', function () {
 
     // validity testing
     if (isNaN(inputFeni) || inputFeni <= 0 || inputFeni > userFund || userFund <= 0) {
-        return alert('DGM Feni');
+        return alert("Kindly Insure:\n -Valid Amount\n -Sufficient Fund\n -Amount must be Positive Value");
     }
     else {
         // update balance
@@ -83,7 +83,7 @@ donateFeni.addEventListener('click', function () {
 
         // history
         const historyCard = document.createElement('div');
-        historyCard.classList.add('bg-white', 'border' ,'p-4', 'md:p-8' ,'rounded-xl')
+        historyCard.classList.add('bg-white', 'border', 'p-4', 'md:p-8', 'rounded-xl')
 
         historyCard.innerHTML = `
                             <h3 class="text-xl font-bold text text-gray-900 mb-4">
@@ -116,7 +116,7 @@ donateQuota.addEventListener('click', function () {
 
     // validity testing
     if (isNaN(inputQuota) || inputQuota <= 0 || inputQuota > userFund || userFund <= 0) {
-        return alert('DGM Quota');
+        return alert("Kindly Insure:\n \n -Valid Amount\n -Sufficient Fund\n -Amount must be Positive Value");
     }
     else {
         // update balance
@@ -129,11 +129,11 @@ donateQuota.addEventListener('click', function () {
         // modal open
         document.getElementById('quota-modal').classList.remove("hidden");
 
-          // history
-          const historyCard = document.createElement('div');
-          historyCard.classList.add('bg-white', 'border' ,'p-4', 'md:p-8' ,'rounded-xl');
-          
-          historyCard.innerHTML = `
+        // history
+        const historyCard = document.createElement('div');
+        historyCard.classList.add('bg-white', 'border', 'p-4', 'md:p-8', 'rounded-xl');
+
+        historyCard.innerHTML = `
                       <h3 class="text-xl font-bold text text-gray-900 mb-4">
                       ${inputQuota} Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh
                       </h3>
@@ -141,7 +141,7 @@ donateQuota.addEventListener('click', function () {
                       Date : ${new Date()}
                       </p>
           `;
-          historyContainer.appendChild(historyCard);
+        historyContainer.appendChild(historyCard);
     }
 })
 
@@ -170,6 +170,7 @@ historyBtn.addEventListener('click', function () {
     donationBtn.classList.add('border-2');
 
     donateContainer.classList.add('hidden')
+    historyContainer.classList.remove('hidden')
 
 })
 
@@ -182,5 +183,6 @@ donationBtn.addEventListener('click', function () {
     historyBtn.classList.add('text-gray-600', 'border');
 
     donateContainer.classList.remove('hidden');
+    historyContainer.classList.add('hidden')
 
 })
