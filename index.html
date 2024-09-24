@@ -48,10 +48,12 @@
             <!------------------------Donate and History button =------------------>
             <div class="text-lg md:text-xl font-semibold mt-6 md:mt-16  flex gap-4 justify-center ">
                 <div>
-                    <button id="donation-btn" class="px-5 md:px-8 py-3 sm:py-4 rounded-lg border-gray-300  bg-lime-400 text-gray-950 ">Donation</button>
+                    <button id="donation-btn"
+                        class="px-5 md:px-8 py-3 sm:py-4 rounded-lg border-gray-300  bg-lime-400 text-gray-950 ">Donation</button>
                 </div>
                 <div>
-                    <button id="history-btn" class="px-5 md:px-8 py-3 sm:py-4 rounded-lg border-gray-300 text-gray-600  border ">History</button>
+                    <button id="history-btn"
+                        class="px-5 md:px-8 py-3 sm:py-4 rounded-lg border-gray-300 text-gray-600  border ">History</button>
                 </div>
             </div>
         </div>
@@ -59,11 +61,11 @@
     <main>
         <div class="divider"></div>
         <!-- Donate and history Section -->
-        <section class="w-11/12 md:w-10/12 lg:w-4/5 mx-auto">
+        <section class="w-11/12 xl:w-4/5 mx-auto">
             <!-- Donate container-->
             <div id="donate-container" class="space-y-4 md:space-y-8">
                 <!-- card-1 -->
-                <div class=" border-2 rounded-2xl p-4 md:p-8 grid grid-col-1 lg:grid-cols-2 gap-4 md:gap-8 ">
+                <div class=" border-2 rounded-2xl p-4 md:p-5 lg:p-8 grid grid-col-1 md:grid-cols-2 gap-4 md:gap-8 ">
                     <!-- image -->
                     <div>
                         <img class="w-full h-full" src="./assets/noakhali.png" alt="">
@@ -110,7 +112,7 @@
                     </div>
                 </div>
                 <!-- card-2 -->
-                <div class="border-2 rounded-2xl p-4 md:p-8 grid grid-col-1 lg:grid-cols-2 gap-4 md:gap-8 ">
+                <div class="border-2 rounded-2xl p-4 md:p-5 lg:p-8 grid grid-col-1 md:grid-cols-2 gap-4 md:gap-8 ">
                     <!-- image -->
                     <div>
                         <img class="w-full h-full" src="./assets/feni.png" alt="">
@@ -159,7 +161,7 @@
                 </div>
 
                 <!-- card-3 -->
-                <div class="border-2 rounded-2xl p-4 md:p-8 grid grid-col-1 lg:grid-cols-2 gap-4 md:gap-8 ">
+                <div class="border-2 rounded-2xl p-4 md:p-5 lg:p-8 grid grid-col-1 md:grid-cols-2 gap-4 md:gap-8 ">
                     <!-- image -->
                     <div>
                         <img class="w-full h-full" src="./assets/quota-protest.png" alt="">
@@ -208,9 +210,12 @@
                     </div>
                 </div>
             </div>
-            <!-- history container -->
-            <div id="history-container" class="w-10/12 mx-auto">
-            <!-- injected all data from DOM -->
+
+        </section>
+        <!-- history section -->
+        <section>
+            <!-- history container [data will  injected by DOM]-->
+            <div id="history-container" class="w-10/12 mx-auto mt-4 md:mt-6 grid gap-4 sm:gap-6">
             </div>
         </section>
     </main>
@@ -218,7 +223,7 @@
 
     </footer>
     <!-- DOM -->
-     <!--  -->
+    <!--  -->
     <!-- <script src="./javaScript/modals.js"></script> -->
     <script src="./javaScript/index.js"></script>
     <script src="./javaScript/functions.js"></script>

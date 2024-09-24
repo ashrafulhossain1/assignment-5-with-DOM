@@ -4,14 +4,8 @@ blogBtn.addEventListener('click', function () {
     window.location.href = './FAQs.html';
 });
 
-// common function 
-// function getInputValue(id){
-//     const InputValue =document.getElementById(id).value;
-//     const InputValueNumber = parseFloat(InputValue);
-//     return InputValueNumber;
-// }
-
-
+// GLOBAL VARIABLE DECLARATION 
+const historyContainer = document.getElementById('history-container');
 
 // -----------------------------------noakhali donate section----------------------------------------------//
 
@@ -22,6 +16,7 @@ donateNoakhali.addEventListener('click', function () {
     const balanceNoyakhali = getTextValue('noakhali-balance');
     const InputNoakhali = getInputValue('input-noakhali');
 
+    // validity testing
     if (isNaN(InputNoakhali) || InputNoakhali <= 0 || userFund <= 0 || userFund < InputNoakhali) {
         return alert('DGM')
     }
@@ -36,23 +31,19 @@ donateNoakhali.addEventListener('click', function () {
         // modal
         document.getElementById('Noakhali-modal').classList.remove("hidden");
 
-        const historyContainer = document.getElementById('history-container')
+        // history
         const historyCard = document.createElement('div');
+        historyCard.classList.add('bg-white', 'border' ,'p-4', 'md:p-8' ,'rounded-xl')
+
         historyCard.innerHTML = `
-            <div class="bg-white border p-4 md:p-8 rounded-xl">
                     <h3 class="text-xl font-bold text text-gray-900 mb-4">
-                    ${InputNoakhali} Taka is Donated for Famine-2024 at Feni,
-                    Bangladesh
+                    ${InputNoakhali} Taka is Donated for flood of Noakhali, Bangladesh
                     </h3>
                     <p>
                     Date : ${new Date()}
                     </p>
-        </div>
         `;
-        historyContainer.prepend(historyCard);
-        
-        
-
+        historyContainer.appendChild(historyCard);
 
 
 
@@ -75,7 +66,7 @@ donateFeni.addEventListener('click', function () {
     const balanceFeni = getTextValue("feni-balance");
     const inputFeni = getInputValue("input-feni")
 
-    // console.log({userFund,feniBalance,inputFeni})
+    // validity testing
     if (isNaN(inputFeni) || inputFeni <= 0 || inputFeni > userFund || userFund <= 0) {
         return alert('DGM Feni');
     }
@@ -89,6 +80,21 @@ donateFeni.addEventListener('click', function () {
 
         // modal
         document.getElementById('feni-modal').classList.remove("hidden");
+
+        // history
+        const historyCard = document.createElement('div');
+        historyCard.classList.add('bg-white', 'border' ,'p-4', 'md:p-8' ,'rounded-xl')
+
+        historyCard.innerHTML = `
+                            <h3 class="text-xl font-bold text text-gray-900 mb-4">
+                            ${inputFeni} Taka is Donated for Flood Relief in Feni,Bangladesh
+                            </h3>
+                            <p>
+                            Date : ${new Date()}
+                            </p>
+                `;
+        historyContainer.appendChild(historyCard);
+
     };
 
 });
@@ -122,6 +128,20 @@ donateQuota.addEventListener('click', function () {
 
         // modal open
         document.getElementById('quota-modal').classList.remove("hidden");
+
+          // history
+          const historyCard = document.createElement('div');
+          historyCard.classList.add('bg-white', 'border' ,'p-4', 'md:p-8' ,'rounded-xl');
+          
+          historyCard.innerHTML = `
+                      <h3 class="text-xl font-bold text text-gray-900 mb-4">
+                      ${inputQuota} Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh
+                      </h3>
+                      <p>
+                      Date : ${new Date()}
+                      </p>
+          `;
+          historyContainer.appendChild(historyCard);
     }
 })
 
@@ -130,6 +150,9 @@ document.getElementById('quota-modal-off').addEventListener('click', function ()
     // console.log('click close "quota"')
     document.getElementById('quota-modal').classList.add('hidden');
 })
+
+
+
 
 
 //:::::::::::::::::::::::::: DONATION AND HISTORY SECTION TOGGLE FEATURES::::::::::::::::::::::::::::://
