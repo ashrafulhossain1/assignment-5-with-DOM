@@ -134,10 +134,10 @@ donateQuota.addEventListener('click', function () {
         historyCard.classList.add('bg-white', 'border', 'p-4', 'md:p-8', 'rounded-xl');
 
         historyCard.innerHTML = `
-                      <h3 class="text-xl font-bold text text-gray-900 mb-4">
+                      <h3 class="text-base md:text-xl font-bold text-gray-900 mb-4">
                       ${inputQuota} Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh
                       </h3>
-                      <p>
+                      <p class ="text-xs md:text-base text-gray-600 font-light">
                       Date : ${new Date()}
                       </p>
           `;
