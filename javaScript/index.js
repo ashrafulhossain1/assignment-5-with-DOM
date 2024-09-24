@@ -24,8 +24,8 @@ donateNoakhali.addEventListener('click', function () {
         // update balance
         const newBalanceNoakhali = balanceNoyakhali + InputNoakhali;
         const newUserFund = userFund - InputNoakhali;
-        document.getElementById('noakhali-balance').innerText = newBalanceNoakhali;
-        document.getElementById('user-fund').innerText = newUserFund;
+        document.getElementById('noakhali-balance').innerText = parseFloat(newBalanceNoakhali.toFixed(2));
+        document.getElementById('user-fund').innerText = parseFloat(newUserFund.toFixed(2));
         document.getElementById('input-noakhali').value = '';
 
         // modal
@@ -74,8 +74,8 @@ donateFeni.addEventListener('click', function () {
         // update balance
         const newUserFund = userFund - inputFeni;
         const newBalanceFeni = balanceFeni + inputFeni;
-        document.getElementById('user-fund').innerText = newUserFund;
-        document.getElementById("feni-balance").innerText = newBalanceFeni;
+        document.getElementById('user-fund').innerText = parseFloat(newUserFund.toFixed(2));
+        document.getElementById("feni-balance").innerText = parseFloat(newBalanceFeni.toFixed(2));
         document.getElementById("input-feni").value = '';
 
         // modal
@@ -122,8 +122,8 @@ donateQuota.addEventListener('click', function () {
         // update balance
         const newUserFund = userFund - inputQuota;
         const newBalanceQuota = quotaBalance + inputQuota;
-        document.getElementById('user-fund').innerText = newUserFund;
-        document.getElementById('quota-balance').innerText = newBalanceQuota;
+        document.getElementById('user-fund').innerText = parseFloat(newUserFund.toFixed(2));
+        document.getElementById('quota-balance').innerText = parseFloat(newBalanceQuota.toFixed(2));
         document.getElementById('input-quota').value = '';
 
         // modal open
