@@ -45,14 +45,13 @@
                     </div>
                 </nav>
             </div>
-            <!------------------------ donate button =------------------>
-            <div class="hidden text-lg md:text-xl font-semibold mt-6 md:mt-16  flex gap-4 justify-center ">
+            <!------------------------Donate and History button =------------------>
+            <div class="text-lg md:text-xl font-semibold mt-6 md:mt-16  flex gap-4 justify-center ">
                 <div>
-                    <button class="px-5 md:px-8 py-3 sm:py-4 rounded-lg  bg-lime-400 text-gray-950">Donation</button>
+                    <button id="donation-btn" class="px-5 md:px-8 py-3 sm:py-4 rounded-lg border-gray-300  bg-lime-400 text-gray-950 ">Donation</button>
                 </div>
                 <div>
-                    <button
-                        class="px-5 md:px-8 py-3 sm:py-4 rounded-lg border-2  border-gray-300 text-gray-600">History</button>
+                    <button id="history-btn" class="px-5 md:px-8 py-3 sm:py-4 rounded-lg border-gray-300 text-gray-600  border ">History</button>
                 </div>
             </div>
         </div>
@@ -60,9 +59,9 @@
     <main>
         <div class="divider"></div>
         <!-- Donate and history Section -->
-        <section class="w-11/12 lg:w-4/5 mx-auto">
+        <section class="w-11/12 md:w-10/12 lg:w-4/5 mx-auto">
             <!-- Donate container-->
-            <div class="space-y-4 md:space-y-8">
+            <div id="donate-container" class="space-y-4 md:space-y-8">
                 <!-- card-1 -->
                 <div class=" border-2 rounded-2xl p-4 md:p-8 grid grid-col-1 lg:grid-cols-2 gap-4 md:gap-8 ">
                     <!-- image -->
@@ -210,8 +209,8 @@
                 </div>
             </div>
             <!-- history container -->
-            <div>
-                <!-- -------------------------------will be written history---------------------- -->
+            <div class="w-10/12 mx-auto">
+            <!-- injected all data from DOM -->
             </div>
         </section>
     </main>

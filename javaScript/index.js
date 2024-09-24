@@ -13,7 +13,7 @@ blogBtn.addEventListener('click', function () {
 
 
 
-// noakhali donate section
+// -----------------------------------noakhali donate section----------------------------------------------//
 
 const donateNoakhali = document.getElementById("donate-btn-noyakhali");
 donateNoakhali.addEventListener('click', function () {
@@ -35,6 +35,10 @@ donateNoakhali.addEventListener('click', function () {
 
         // modal
         document.getElementById('Noakhali-modal').classList.remove("hidden");
+
+
+
+        
     }
 })
 
@@ -45,7 +49,8 @@ document.getElementById('noakhali-modal-off').addEventListener('click', function
 
 
 
-// // feni donate section
+//------------------------------------------feni donate section-----------------------------------------//
+
 const donateFeni = document.getElementById("donate-btn-feni");
 donateFeni.addEventListener('click', function () {
     console.log('second modal')
@@ -77,7 +82,8 @@ document.getElementById('feni-modal-off').addEventListener('click', function(){
     document.getElementById('feni-modal').classList.add('hidden');
 })
 
-// Quota Movement Donate Section
+//--------------------------------------- Quota Movement Donate Section---------------------------------------//
+
 const donateQuota = document.getElementById('donate-btn-quota');
 donateQuota.addEventListener('click', function(){
     // console.log('click quota')
@@ -106,4 +112,35 @@ donateQuota.addEventListener('click', function(){
 document.getElementById('quota-modal-off').addEventListener('click', function(){
     // console.log('click close "quota"')
     document.getElementById('quota-modal').classList.add('hidden');
+})
+
+
+//:::::::::::::::::::::::::: DONATION AND HISTORY SECTION TOGGLE FEATURES::::::::::::::::::::::::::::://
+
+const donationBtn = document.getElementById('donation-btn');
+const historyBtn = document.getElementById('history-btn');
+const donateContainer = document.getElementById('donate-container')
+
+
+historyBtn.addEventListener('click', function(){
+    historyBtn.classList.add('bg-lime-400', 'text-gray-950');
+    historyBtn.classList.remove('text-gray-600', 'border');
+
+    donationBtn.classList.remove('bg-lime-400', 'text-gray-950');
+    donationBtn.classList.add( 'border-2');
+
+    donateContainer.classList.add('hidden')
+
+})
+
+donationBtn.addEventListener('click', function(){
+    
+    donationBtn.classList.add('bg-lime-400', 'text-gray-950')
+    donationBtn.classList.remove( 'border-2');
+    
+    historyBtn.classList.remove('bg-lime-400', 'text-gray-950');
+    historyBtn.classList.add('text-gray-600', 'border');
+
+    donateContainer.classList.remove('hidden');
+
 })
