@@ -21,7 +21,7 @@
 </head>
 
 <body>
-    <header class="mb-10 sticky top-0 z-10 bg-white/30 backdrop-blur-lg">
+    <header class=" mb-10 sticky top-0 z-10 bg-white/30 backdrop-blur-lg">
         <!--------------------------- navbar start ------------------>
         <div id="navbar">
             <div class="bg-orange-200/15 ">
@@ -40,13 +40,13 @@
                     <div
                         class="flex justify-center items-center gap-2 md:gap-3 text-gray-600 font-medium text-base sm:text-xl ">
                         <img src="./assets/coin.png" alt="">
-                        <span>5000</span>
+                        <span id="user-fund">5000</span>
                         <span>BDT</span>
                     </div>
                 </nav>
             </div>
             <!------------------------ donate button =------------------>
-            <div class="text-lg md:text-xl font-semibold mt-6 md:mt-16  flex gap-4 justify-center ">
+            <div class="hidden text-lg md:text-xl font-semibold mt-6 md:mt-16  flex gap-4 justify-center ">
                 <div>
                     <button class="px-5 md:px-8 py-3 sm:py-4 rounded-lg  bg-lime-400 text-gray-950">Donation</button>
                 </div>
@@ -64,7 +64,7 @@
             <!-- Donate container-->
             <div class="space-y-4 md:space-y-8">
                 <!-- card-1 -->
-                <div class="border-2 rounded-2xl p-4 md:p-8 grid grid-col-1 lg:grid-cols-2 gap-4 md:gap-8 ">
+                <div class=" border-2 rounded-2xl p-4 md:p-8 grid grid-col-1 lg:grid-cols-2 gap-4 md:gap-8 ">
                     <!-- image -->
                     <div>
                         <img class="w-full h-full" src="./assets/noakhali.png" alt="">
@@ -74,7 +74,7 @@
                         <div>
                             <button class="btn text-gray-600">
                                 <img src="./assets/coin.png" alt="">
-                                <span>250000</span>
+                                <span id="noakhali-balance">25000</span>
                                 <span>BDT</span>
                             </button>
                         </div>
@@ -84,7 +84,7 @@
                             supplies and to those affected by this disaster. Every contribution, big or small, makes
                             difference. Please join us in supporting the relief efforts and making a positive impact on
                             the lives of those in need.</p>
-                        <input type="text" placeholder="Write Donation Amount"
+                        <input id="input-noakhali" type="text" placeholder="Write Donation Amount"
                             class="mt-6 input input-bordered rounded-lg w-full p-5 h-[56px]" />
 
 
@@ -121,7 +121,7 @@
                         <div>
                             <button class="btn text-gray-600">
                                 <img src="./assets/coin.png" alt="">
-                                <span>70000</span>
+                                <span id="feni-balance">30000</span>
                                 <span>BDT</span>
                             </button>
                         </div>
@@ -132,7 +132,7 @@
                             calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of
                             this disaster. Every contribution counts towards making a real difference. Please consider
                             donating today to assist those in urgent need.</p>
-                        <input type="text" placeholder="Write Donation Amount"
+                        <input id="input-feni" type="text" placeholder="Write Donation Amount"
                             class="mt-6 input input-bordered rounded-lg w-full p-5 h-[56px]" />
 
 
@@ -170,7 +170,7 @@
                         <div>
                             <button class="btn text-gray-600">
                                 <img src="./assets/coin.png" alt="">
-                                <span>500000</span>
+                                <span id="quota-balance">20000</span>
                                 <span>BDT</span>
                             </button>
                         </div>
@@ -182,7 +182,7 @@
                             need during this challenging time. Every donation plays a vital role in alleviating their
                             suffering and aiding in their recovery. Please consider making a donation to support these
                             brave individuals in their time of need.</p>
-                        <input type="text" placeholder="Write Donation Amount"
+                        <input id="input-quota" type="text" placeholder="Write Donation Amount"
                             class="mt-6 input input-bordered rounded-lg w-full p-5 h-[56px]" />
 
 
@@ -219,8 +219,10 @@
 
     </footer>
     <!-- DOM -->
-    <script src="./javaScript/modals.js"></script>
+     <!--  -->
+    <!-- <script src="./javaScript/modals.js"></script> -->
     <script src="./javaScript/index.js"></script>
+    <script src="./javaScript/functions.js"></script>
 </body>
 
 </html>
